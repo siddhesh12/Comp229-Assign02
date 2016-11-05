@@ -4,17 +4,41 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+}
+        </style>
     <title></title>
+    <ul>
+
+  <li><a href="Default.aspx">Home</a></li>
+  <li><a href="Survey.aspx">Survey</a></li>
+    </ul>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+             <link rel="stylesheet" type="text/css" href="Style/home.css">
+             <link rel="stylesheet" type="text/css" href="Style/survey.css">
+
+
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        <h1>hello this is master page baby!</h1>
+     <asp:ContentPlaceHolder ID="body" runat="server">
         </asp:ContentPlaceHolder>
-    </div>
-    </form>
+   
 </body>
 </html>
