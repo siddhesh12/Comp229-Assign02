@@ -22,7 +22,6 @@ li a {
     padding: 8px;
 }
         </style>
-    <title></title>
     <ul>
 
   <li><a href="Default.aspx">Home</a></li>

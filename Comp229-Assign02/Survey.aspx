@@ -5,11 +5,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="body" Runat="Server">
     <form id="form1" runat="server">
 
+        <script runat="server">
+  protected void Page_Load(object sender, EventArgs e)
+  {
+    //set the label text to the current time
+    title.InnerText = "Survey";
+
+  }
+
+</script> 
+
+     <title id="title" runat="server"></title>
     <p id="special-p">What is your email id? <br/></p>
       <p id="special-p"> <asp:TextBox ID="userName" runat ="server" />
       <asp:RegularExpressionValidator id="emailValidator" runat="server" ControlToValidate="userName" ValidationExpression="^\S+@\S+\.\S+$" ErrorMessage="Please provide us valid emailID!" />
     </p>
-
+    
      <p id="special-p">What is your age? <br/></p>
        <p id="special-p"> <asp:TextBox ID="ageTextBox" runat ="server" />
            <asp:RangeValidator id="birthDateRangeTest" runat="server"
@@ -41,7 +52,8 @@
     </p>
 
      <p id="special-p">
-        <asp:Button id="submitButton" runat="server" Text="Submit" />
+         <asp:Button ID="submitButton" runat="server"
+              OnClick="buttonClicked" Text="Submit" />
     </p>
     </form>
 
